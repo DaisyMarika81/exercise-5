@@ -49,3 +49,18 @@ body {
   border-bottom: 1px solid #ddd;
   padding: 10px;
 }
+
+.carousel {
+  background: #512da8;
+  margin-top: 30px;
+}
+
+.carousel-item {
+  height: 600px;
+}
+
+.carousel-item img {
+  height: 700px;
+  width: 1300px;
+  margin: auto;
+}
