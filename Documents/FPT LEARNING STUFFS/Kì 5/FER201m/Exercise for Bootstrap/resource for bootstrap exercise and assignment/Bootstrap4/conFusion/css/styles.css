@@ -64,3 +64,9 @@ body {
   width: 1300px;
   margin: auto;
 }
+
+#carouselButton {
+  margin: auto;
+  z-index: 1;
+  margin-top: 20px;
+}
