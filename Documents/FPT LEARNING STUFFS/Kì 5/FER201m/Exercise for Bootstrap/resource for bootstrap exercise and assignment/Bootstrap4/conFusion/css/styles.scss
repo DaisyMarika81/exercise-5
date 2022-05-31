@@ -1,74 +1,78 @@
 $lt-gray: #dddddd;
-$background-dark: #512DA8;
-$background-light: #9575CD;
-$background-pale: #D1C4E9;
+$background-dark: #512da8;
+$background-light: #9575cd;
+$background-pale: #d1c4e9;
 
 //Height variables
 $carousel-item-height: 600px;
 
-@mixin zero-margin($pad-up-dn, $pad-left-right){
-    margin: 0px auto 0px;
-    padding: $pad-up-dn $pad-left-right;
+@mixin zero-margin($pad-up-dn, $pad-left-right) {
+  margin: 0px auto 0px;
+  padding: $pad-up-dn $pad-left-right;
 }
 
-.row-header{
-    @include zero-margin(0px, 0px);
+.row-header {
+  @include zero-margin(0px, 0px);
 }
 
-.row-content{
-    @include zero-margin(50px, 0px);
-    border-bottom: 1px ridge;
-    min-height: 400px;
+.row-content {
+  @include zero-margin(50px, 0px);
+  border-bottom: 1px ridge;
+  min-height: 400px;
 }
 
 .footer {
-    background-color: $background-pale;
-    @include zero-margin(20px, 0px);
-  }
-  
-  .jumbotron {
-    @include zero-margin(70px, 30px);
-    background-color: $background-light;
-    color: floralwhite;
-  }
-  
-  address {
-    font-size: 80%;
-    margin: 0px auto;
-    color: #0f0f0f;
-  }
-  
-  .navbar-dark {
-    background-color: $background-dark;
-  }
-  
-  .tab-content {
-    border-left: 1px solid $lt-gray;
-    border-right: 1px solid $lt-gray;
-    border-bottom: 1px solid $lt-gray;
-    padding: 10px;
-  }
+  background-color: $background-pale;
+  @include zero-margin(20px, 0px);
+}
 
-  .carousel{
-      background: $background-dark;
-      margin-top: 30px;
+.jumbotron {
+  @include zero-margin(70px, 30px);
+  background-color: $background-light;
+  color: floralwhite;
+}
 
-      .carousel-item{
-          
-          height: $carousel-item-height;
+address {
+  font-size: 80%;
+  margin: 0px auto;
+  color: #0f0f0f;
+}
 
-          img{
-              position: absolute;
-              top: 0;
-              left: 0;
-              min-height: 300px;
-          }
-      }
+.navbar-dark {
+  background-color: $background-dark;
+}
+
+.tab-content {
+  border-left: 1px solid $lt-gray;
+  border-right: 1px solid $lt-gray;
+  border-bottom: 1px solid $lt-gray;
+  padding: 10px;
+}
+
+.carousel {
+  background: $background-dark;
+  margin-top: 30px;
+
+  .carousel-item {
+    height: $carousel-item-height;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 300px;
+    }
   }
+}
 
-  #carousel-button{
-      right: 0px;
-      position: relative;
-      bottom: 0px;
-      z-index: 1;
-  }
+#carousel-button {
+  right: 0px;
+  position: relative;
+  bottom: 0px;
+  z-index: 1;
+}
+
+#myModal {
+  background-color: $background-pale;
+  color: white;
+}

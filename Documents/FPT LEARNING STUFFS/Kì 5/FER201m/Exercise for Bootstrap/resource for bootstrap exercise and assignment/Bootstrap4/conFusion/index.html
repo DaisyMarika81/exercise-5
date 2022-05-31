@@ -46,11 +46,10 @@
                 </ul>
 
             </div>
-
-
-            <a data-toggle="modal" data-target="#loginModal" href="#">Login</a>
-
-
+            <!-- Button trigger modal -->
+            <a type="button" data-toggle="modal" data-target="#modelId" class="text-white">
+                <i class="fa fa-external-link-alt"></i> Login
+            </a>
     </nav>
 
     <header class="jumbotron">
@@ -66,11 +65,8 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-md-4 col-sm-6 align-self-center">
-                    <!-- <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true"
-                        title="Or Call us at  <br> <strong>+852 12345678</strong>" data-placement="bottom"
-                        href="reserveform">Reserve Table</a> -->
-                    <button type="button" class="btn btn-warning btn-lg" data-toggle="collapse" data-target="#myModal">
-                        <a href="#myModal">Reserve A Table</a>
+                    <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal">
+                        Reserve A Table
                     </button>
                 </div>
             </div>
@@ -78,7 +74,7 @@
         </div>
     </header>
 
-    
+
 
     <div class="row row-content">
         <div class="col">
@@ -166,11 +162,11 @@
                 </h2>
                 <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers,
                     six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just
-                    $19.99 per person </p> 
+                    $19.99 per person </p>
             </div>
             <img class="d-flex mr-3 img-thumnail align-self-center order-sm-last" src="img/buffet.png" alt="Uthappizza">
         </div>
-        
+
         <hr>
 
         <div class="row row-content align-items-center margin-p">
@@ -191,183 +187,207 @@
             </div>
         </div>
 
-
-
-        <div class="collapse" id="myModal" tabindex="-1">
-            <div class="col-12 col-sm-8">
-                <form style="border: 1px solid rgb(223, 217, 217)">
-                    <div class="card-header bg-warning" style="color:white">
-                        <h3>Reserve a table</h3>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 offset-1 col-sm-2">
+                        <h5>Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
                     </div>
-                    <div class="card-body">
-                        <div class="form-group row">
-                            <label class="form-check-label col-12 col-sm-3">Num of guests</label>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                    value="option1">
-                                <label class="form-check-label" for="inlineRadio1">1</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                    value="option2">
-                                <label class="form-check-label" for="inlineRadio1">2</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                                    value="option3">
-                                <label class="form-check-label" for="inlineRadio1">3</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
-                                    value="option4">
-                                <label class="form-check-label" for="inlineRadio1">4</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5"
-                                    value="option5">
-                                <label class="form-check-label" for="inlineRadio1">5</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6"
-                                    value="option6">
-                                <label class="form-check-label" for="inlineRadio1">6</label>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="form-check-label col-12 col-sm-3">Date and time</label>
-                            <div>
-                                <input type="text" name="" placeholder="Date">
-                                <input type="text" name="" placeholder="Time">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <a class="btn btn-primary btn-lg" style="text-align: center; margin: auto; ">Reserve</a>
+                    <div class="col-7 col-sm-5">
+                        <h5>Our Address</h5>
+                        <address>
+                            121, Clear Water Bay Road<br>
+                            Clear Water Bay, Kowloon<br>
+                            HONG KONG<br>
+                            <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
+                            <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
+                            <i class="fa fa-envelope fa-lg"></i>: <a
+                                href="mailto:confusion@food.net">confusion@food.net</a>
+                        </address>
+                    </div>
+                    <div class="col-12 col-sm-4 align-self-center">
+                        <div class="text-center ">
+                            <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i
+                                    class="fa fa-google-plus"></i></a>
+                            <a class="btn btn-social-icon btn-facebook"
+                                href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                            <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i
+                                    class="fa fa-google-plus"></i></a>
+                            <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i
+                                    class="fa fa-linkedin"></i></a>
+                            <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i
+                                    class="fa fa-youtube"></i></a>
+                            <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
                         </div>
                     </div>
-                </form>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <p>© Copyright 2018 Ristorante Con Fusion</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Button trigger modal -->
+
+        <script>
+            // $(document).ready(function () {
+            //     $("#myCarousel").carousel({ interval: 3000 });
+            //     $("#carousel-pause").click(function () {
+            //         $("#myCarousel").carousel('pause')
+            //     });
+            //     $("#carousel-play").click(function () {
+            //         $("#myCarousel").carousel('cycle');
+            //     });
+            // });
+
+            $("#carouselButton").click(function () {
+                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
+                    $("#myCarousel").carousel('pause');
+                    $("#carouselButton").children("span").removeClass('fa-pause');
+                    $("#carouselButton").children("span").addClass('fa-play');
+                }
+                else if ($("#carouselButton").children("span").hasClass('fa-play')) {
+                    $("#myCarousel").carousel('cycle');
+                    $("#carouselButton").children("span").removeClass('fa-play');
+                    $("#carouselButton").children("span").addClass('fa-pause');
+                }
+            })
+        </script>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content" style="background-color: #d1c4e9">
+                    <div class="modal-header" style="background-color: #512da8; color: white">
+                        <h5 class="modal-title">Login</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" style="color:white">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <form>
+                                <div class="form-group row">
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" name="inputName" id="inputName"
+                                            placeholder="Enter email" />
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" name="inputName" id="inputName"
+                                            placeholder="Password" />
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input" name="" id=""
+                                                    value="checkedValue" />
+                                                Remember me
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Login</button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
-    </div>
 
-
-
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-4 offset-1 col-sm-2">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-7 col-sm-5">
-                    <h5>Our Address</h5>
-                    <address>
-                        121, Clear Water Bay Road<br>
-                        Clear Water Bay, Kowloon<br>
-                        HONG KONG<br>
-                        <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
-                        <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
-                        <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:confusion@food.net">confusion@food.net</a>
-                    </address>
-                </div>
-                <div class="col-12 col-sm-4 align-self-center">
-                    <div class="text-center ">
-                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i
-                                class="fa fa-google-plus"></i></a>
-                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i
-                                class="fa fa-facebook"></i></a>
-                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i
-                                class="fa fa-google-plus"></i></a>
-                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i
-                                class="fa fa-linkedin"></i></a>
-                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i
-                                class="fa fa-youtube"></i></a>
-                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+        <!-- Reserve Table Model -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content" style="background-color: #d1c4e9">
+                    <div class="modal-header" style="background-color: #512da8; color: white">
+                        <h5 class="modal-title">Reserve A Table</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"style="color:white">&times;</span>
+                        </button>
                     </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-auto">
-                    <p>© Copyright 2018 Ristorante Con Fusion</p>
+                    <div class="modal-body" >
+                        <div class="container-fluid">
+                            <form>
+                                <div class="card-body" >
+                                    <div class="form-group row">
+                                        <label class="form-check-label col-12 col-sm-3">Num of guests</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio1" value="option1">
+                                            <label class="form-check-label" for="inlineRadio1">1</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio2" value="option2">
+                                            <label class="form-check-label" for="inlineRadio1">2</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio3" value="option3">
+                                            <label class="form-check-label" for="inlineRadio1">3</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio4" value="option4">
+                                            <label class="form-check-label" for="inlineRadio1">4</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio5" value="option5">
+                                            <label class="form-check-label" for="inlineRadio1">5</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio6" value="option6">
+                                            <label class="form-check-label" for="inlineRadio1">6</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="form-check-label col-12 col-sm-3">Section</label>
+                                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+                                            <label class="btn btn-success">
+                                                <input type="radio" name="options" id="option2" autocomplete="off">
+                                                Non-Smoking
+                                            </label>
+                                            <label class="btn btn-danger">
+                                                <input type="radio" name="options" id="option3" autocomplete="off">
+                                                Smoking
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="form-check-label col-12 col-sm-3">Date and time</label>
+                                        <div>
+                                            <input type="text" name="" placeholder="Date">
+                                            <input type="text" name="" placeholder="Time">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary">Reserve</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- Button trigger modal -->
-
-    <script>
-        $(document).ready(function () {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
-    <script>
-        // $(document).ready(function () {
-        //     $("#myCarousel").carousel({ interval: 3000 });
-        //     $("#carousel-pause").click(function () {
-        //         $("#myCarousel").carousel('pause')
-        //     });
-        //     $("#carousel-play").click(function () {
-        //         $("#myCarousel").carousel('cycle');
-        //     });
-        // });
-
-        $("#carouselButton").click(function () {
-            if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                $("#myCarousel").carousel('pause');
-                $("#carouselButton").children("span").removeClass('fa-pause');
-                $("#carouselButton").children("span").addClass('fa-play');
-            }
-            else if ($("#carouselButton").children("span").hasClass('fa-play')) {
-                $("#myCarousel").carousel('cycle');
-                $("#carouselButton").children("span").removeClass('fa-play');
-                $("#carouselButton").children("span").addClass('fa-pause');
-            }
-        })
-    </script>
-
-    <div class="modal fade" id="loginModal" role="dialog">
-        <div class="modal-dialog modal-lg" role="content">
-
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-            </div>
-
-            <div class="modal-body">
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-sm-4">
-                            <label class="sr-only" for="exampleInputEmail3">Email Address</label>
-                            <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3"
-                                placeholder="Enter email">
-                        </div>
-                        <div class="form-group col-sm-auto">
-                            <label class="sr-only" for="exampleInputPassword3">Password</label>
-                            <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3"
-                                placeholder="Password">
-                        </div>
-                        <div class="col-sm-auto">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-check-label">Remember me</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <button type="button" class="btn btn-secondary btn-sm ml-auto"
-                            data-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+        <!-- End of RM -->
     </div>
 </body>
 

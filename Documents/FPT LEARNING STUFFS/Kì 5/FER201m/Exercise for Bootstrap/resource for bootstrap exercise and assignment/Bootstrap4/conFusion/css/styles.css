@@ -70,7 +70,7 @@ body {
   z-index: 1;
   margin-top: 20px;
 }
-#loginModal{
+#loginModal {
   position: fixed;
   top: 0;
   left: 0;
