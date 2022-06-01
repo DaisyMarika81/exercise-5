@@ -56,13 +56,13 @@ body {
 }
 
 .carousel-item {
-  height: 600px;
+  height: 300px;
 }
 
 .carousel-item img {
   height: 700px;
   width: 1300px;
-  margin: auto;
+  margin-left: 100px;
 }
 
 #carouselButton {

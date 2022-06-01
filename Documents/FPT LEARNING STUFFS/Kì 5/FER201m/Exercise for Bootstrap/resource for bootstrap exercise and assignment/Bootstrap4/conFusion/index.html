@@ -10,11 +10,14 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/styles1.css">
     <link rel="stylesheet" href="./css/styles.css" />
-    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+
     <title>Ristorante Con Fusion</title>
 
 </head>
@@ -42,14 +45,21 @@
                         <a class="nav-link" href="./contactus.html"><span
                                 class="fa fa-address-card fa-lg"></span>Contact</a>
                     </li>
+                    <li class="nav-item">
 
+                    </li>
                 </ul>
+
+
+
 
             </div>
             <!-- Button trigger modal -->
-            <a type="button" data-toggle="modal" data-target="#modelId" class="text-white">
-                <i class="fa fa-external-link-alt"></i> Login
+            <!-- Login Modal -->
+            <a class="nav-link " type="button" style="color:white" id="button-login">
+                <i class="fa-solid fa-right-to-bracket"></i>Login
             </a>
+
     </nav>
 
     <header class="jumbotron">
@@ -65,10 +75,94 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-md-4 col-sm-6 align-self-center">
-                    <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal">
+                    <button type="button" class="btn btn-warning btn-lg" id="reserve-button">
                         Reserve A Table
                     </button>
                 </div>
+                <!-- Reserve Table Model -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Reserve A Table</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true" style="color:white">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <form style="color:black">
+                                        <div class="card-body">
+                                            <div class="form-group row">
+                                                <label class="form-check-label col-12 col-sm-3">Num of guests</label>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                    <label class="form-check-label" for="inlineRadio1">2</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                                    <label class="form-check-label" for="inlineRadio1">3</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                                                    <label class="form-check-label" for="inlineRadio1">4</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                                                    <label class="form-check-label" for="inlineRadio1">5</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                                                    <label class="form-check-label" for="inlineRadio1">6</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="form-check-label col-12 col-sm-3">Section</label>
+                                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+                                                    <label class="btn btn-success">
+                                                        <input type="radio" name="options" id="option2"
+                                                            autocomplete="off">
+                                                        Non-Smoking
+                                                    </label>
+                                                    <label class="btn btn-danger">
+                                                        <input type="radio" name="options" id="option3"
+                                                            autocomplete="off">
+                                                        Smoking
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label class="form-check-label col-12 col-sm-3">Date and time</label>
+                                                <div>
+                                                    <input type="text" name="" placeholder="Date">
+                                                    <input type="text" name="" placeholder="Time">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer" style="background-color:#d1c4e9">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Reserve</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of RM -->
             </div>
 
         </div>
@@ -119,15 +213,7 @@
             </div>
         </div>
     </div>
-    <div class="row row-content">
-        <!-- <div class="btn-group" id="carouselButton">
-            <button class="btn btn-danger btn-sm" id="carousel-pause">
-                <span class="fa fa-pause"></span>
-            </button>
-            <button class="btn btn-danger btn-sm" id="carousel-play">
-                <span class="fa fa-play"></span>
-            </button>
-        </div> -->
+    <div class="row">
         <button class="btn btn-danger btn-sm" id="carouselButton">
             <span id="carousel-button-icon" class="fa fa-pause"></span>
         </button>
@@ -235,160 +321,80 @@
             </div>
         </footer>
         <!-- Button trigger modal -->
-
-        <script>
-            // $(document).ready(function () {
-            //     $("#myCarousel").carousel({ interval: 3000 });
-            //     $("#carousel-pause").click(function () {
-            //         $("#myCarousel").carousel('pause')
-            //     });
-            //     $("#carousel-play").click(function () {
-            //         $("#myCarousel").carousel('cycle');
-            //     });
-            // });
-
-            $("#carouselButton").click(function () {
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#myCarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                else if ($("#carouselButton").children("span").hasClass('fa-play')) {
-                    $("#myCarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');
-                }
-            })
-        </script>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content" style="background-color: #d1c4e9">
-                    <div class="modal-header" style="background-color: #512da8; color: white">
-                        <h5 class="modal-title">Login</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true" style="color:white">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container">
-                            <form>
-                                <div class="form-group row">
-                                    <div class="col-sm-4">
-                                        <input type="text" class="form-control" name="inputName" id="inputName"
-                                            placeholder="Enter email" />
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <input type="text" class="form-control" name="inputName" id="inputName"
-                                            placeholder="Password" />
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-check">
-                                            <label class="form-check-label">
-                                                <input type="checkbox" class="form-check-input" name="" id=""
-                                                    value="checkedValue" />
-                                                Remember me
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="d-flex justify-content-end">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Login</button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- Reserve Table Model -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content" style="background-color: #d1c4e9">
-                    <div class="modal-header" style="background-color: #512da8; color: white">
-                        <h5 class="modal-title">Reserve A Table</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"style="color:white">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body" >
-                        <div class="container-fluid">
-                            <form>
-                                <div class="card-body" >
-                                    <div class="form-group row">
-                                        <label class="form-check-label col-12 col-sm-3">Num of guests</label>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio1" value="option1">
-                                            <label class="form-check-label" for="inlineRadio1">1</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio2" value="option2">
-                                            <label class="form-check-label" for="inlineRadio1">2</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio3" value="option3">
-                                            <label class="form-check-label" for="inlineRadio1">3</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio4" value="option4">
-                                            <label class="form-check-label" for="inlineRadio1">4</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio5" value="option5">
-                                            <label class="form-check-label" for="inlineRadio1">5</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio6" value="option6">
-                                            <label class="form-check-label" for="inlineRadio1">6</label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="form-check-label col-12 col-sm-3">Section</label>
-                                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-
-                                            <label class="btn btn-success">
-                                                <input type="radio" name="options" id="option2" autocomplete="off">
-                                                Non-Smoking
-                                            </label>
-                                            <label class="btn btn-danger">
-                                                <input type="radio" name="options" id="option3" autocomplete="off">
-                                                Smoking
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="form-check-label col-12 col-sm-3">Date and time</label>
-                                        <div>
-                                            <input type="text" name="" placeholder="Date">
-                                            <input type="text" name="" placeholder="Time">
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary">Reserve</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End of RM -->
     </div>
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <form>
+                            <div class="form-group row">
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" name="inputName" id="inputName"
+                                        placeholder="Enter email" />
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" name="inputName" id="inputName"
+                                        placeholder="Password" />
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" name="" id=""
+                                                value="checkedValue" />
+                                            Remember me
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Login</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script>
+        // $(document).ready(function () {
+        //     $("#myCarousel").carousel({ interval: 3000 });
+        //     $("#carousel-pause").click(function () {
+        //         $("#myCarousel").carousel('pause')
+        //     });
+        //     $("#carousel-play").click(function () {
+        //         $("#myCarousel").carousel('cycle');
+        //     });
+        // });
+
+        $("#carouselButton").click(function () {
+            if ($("#carouselButton").children("span").hasClass('fa-pause')) {
+                $("#myCarousel").carousel('pause');
+                $("#carouselButton").children("span").removeClass('fa-pause');
+                $("#carouselButton").children("span").addClass('fa-play');
+            }
+            else if ($("#carouselButton").children("span").hasClass('fa-play')) {
+                $("#myCarousel").carousel('cycle');
+                $("#carouselButton").children("span").removeClass('fa-play');
+                $("#carouselButton").children("span").addClass('fa-pause');
+            }
+        })
+    </script>
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./main.js"></script>
 </body>
 
 </html>

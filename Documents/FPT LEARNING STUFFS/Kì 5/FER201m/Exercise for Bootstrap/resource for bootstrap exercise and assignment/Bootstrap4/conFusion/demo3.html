@@ -1,16 +1,220 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-    <link rel="stylesheet" href="./css/styles.css" />
-</head>
-<body>
-    
-</body>
-</html>
+<%-- Document : userUpdate Created on : May 30, 2022, 10:51:33 AM Author : KIM DUONG --%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+        <%@page contentType="text/html" pageEncoding="UTF-8" %>
+            <!DOCTYPE html>
+            <!DOCTYPE html>
+            <html lang="en">
+
+            <head>
+                <title>Update Profile</title>
+                <!-- Required meta tags -->
+                <meta charset="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+                <!-- Bootstrap CSS -->
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+                    crossorigin="anonymous" />
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+                    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+                    crossorigin="anonymous" referrerpolicy="no-referrer" />
+                <link rel="stylesheet" href="./style.css" />
+            </head>
+
+            <body>
+                <div class="content">
+                    <!--Header-->
+                    <div class="content-header">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-8 header-logo" style="font-size: 18px">Parkit</div>
+                                <div class="col-md-2" style="margin-top:13px">
+                                    Welcome ${sessionScope.name}!</div>
+                                <div class="col-md-2 dropdown">
+                                    <button class="btn btn-primary dropdown-toggle" type="button"
+                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false" style="margin-top:8px">
+                                        <i class="fa-solid fa-user"></i>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">View Profile</a>
+                                        <a class="dropdown-item" href="mainController?action=logout">Log Out</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--End of Header-->
+                    <div class="content-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="body-left col-md-2 p-0">
+                                    <div class="d-flex flex-column">
+                                        <button class="menu-detail mt-2">
+                                            <i class="icon fa fa-chalkboard pr-3"></i>
+                                            <a href="userDashboard1.jsp">DashBoard</a>
+                                        </button>
+                                        <button class="menu-detail actived mt-2">
+                                            <i class="icon fa fa-user pr-3"></i><a href="userUpdate.jsp">Update
+                                                Profile</a>
+                                        </button>
+                                        <button class="menu-detail mt-2">
+                                            <i class="icon fa fa-car pr-3"></i>
+                                            <a href="userVehicleList.jsp">Vehicle list</a>
+                                        </button>
+                                        <button class="menu-detail mt-2">
+                                            <i class="icon fa fa-newspaper pr-3"></i>
+                                            <a href="userRequest.jsp">My Requests</a>
+                                        </button>
+                                        <button class="menu-detail mt-2">
+                                            <i class="icon fa fa-money-check-alt pr-3"></i>
+                                            <a href="Booking.jsp">Booking</a>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="body-right col-md-10">
+                                    <div class="title-content">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="title col-md-12">
+                                                    <p class="title-content">Update Profile</p>
+                                                    <p class="title-small">
+                                                        View real-time and occupied parking space
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white" style="
+                                margin-right: 60px;
+                                margin-left: 47px;
+                                height: 65vh;
+                                position: relative;">
+                                        <div class="row">
+                                            <div class="col-md-4"></div>
+                                            <div class="login_form_inner col-md-4" style="margin-top: 30px">
+                                                <c:set var="errors" value="${requestScope.PROFILE_ERROR}" />
+                                                <form class="row login_form" action="mainController" method="post">
+                                                    <div style="
+                                                 font-size: 20px;
+                                                 margin-left: 24px;
+                                                 margin-bottom: 15px;
+                                                 margin-top: 15px;
+                                                 ">
+                                                        Your current full name: ${sessionScope.fullname}
+                                                    </div>
+
+                                                    <div class="col-md-12 form-group">
+                                                        <input name="txtfullnameupdate" required="" type="text"
+                                                            class="form-control" id="name"
+                                                            placeholder="Enter New Full Name" value=""
+                                                            onfocus="this.placeholder = ''"
+                                                            onblur="this.placeholder = 'Enter New Full Name'"
+                                                            style="width: 300px" />
+                                                    </div>
+                                                    <c:if test="${not empty errors.fullnameLengthErr}">
+                                                        <font style="color: red; margin-left: 26px">
+                                                            ${errors.fullnameLengthErr}
+                                                        </font>
+                                                    </c:if>
+                                                    <div style="
+                                                font-size: 20px;
+                                                margin-left: 24px;
+                                                margin-bottom: 15px;
+                                                margin-top: 15px;
+                                                ">
+                                                        Your current phone: ${sessionScope.phone}
+                                                    </div>
+
+                                                    <div class="col-md-12 form-group">
+                                                        <input class="form-control" required="" id="name"
+                                                            name="txtphoneupdate" type="text"
+                                                            placeholder="Enter New Phone"
+                                                            onfocus="this.placeholder = ''"
+                                                            onblur="this.placeholder = 'Enter New Phone'"
+                                                            style="width: 300px" />
+                                                    </div>
+                                                    <c:if test="${not empty errors.phoneLengthErr}">
+                                                        <font style="color: red; margin-left: 26px">
+                                                            ${errors.phoneLengthErr}
+                                                        </font>
+                                                    </c:if>
+                                                    <c:if test="${not empty errors.phoneContainLetter}">
+                                                        <font style="color: red; margin-left: 26px">
+                                                            ${errors.phoneContainLetter}
+                                                        </font>
+                                                    </c:if>
+                                                    <div style="
+                                                font-size: 20px;
+                                                margin-left: 24px;
+                                                margin-bottom: 15px;
+                                                margin-top: 15px;
+                                                ">
+                                                        Your current address: ${sessionScope.address}
+                                                    </div>
+
+                                                    <div class="col-md-12 form-group">
+                                                        <input class="form-control" required="" id="name"
+                                                            name="txtaddressupdate" type="text"
+                                                            placeholder="Enter New Address"
+                                                            onfocus="this.placeholder = ''"
+                                                            onblur="this.placeholder = 'Enter New Address'"
+                                                            style="width: 300px" />
+                                                    </div>
+                                                    <c:if test="${not empty errors.addressLengthErr}">
+                                                        <font style="color: red; margin-left: 26px">
+                                                            ${errors.addressLengthErr}
+                                                        </font>
+                                                    </c:if>
+                                                    <div class="col-md-12 form-group"
+                                                        style="text-align: center; padding-right: 60px">
+                                                        <button class="btn btn-outline-primary" name="action"
+                                                            type="submit" value="Update">
+                                                            Update
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-md-4"></div>
+                                        </div>
+                                    </div>
+                                    <div class="footer mt-3">
+                                        <div class="row pt-1">
+                                            <div class="col-md-6 mt-0">
+                                                <div class="container-fluid">
+                                                    <h5 class="text-center">Our Address</h5>
+                                                    <div class="text-center">
+                                                        <p class="p-0 mb-0">457 Nguyen Hue</p>
+                                                        <p class="p-0 mb-0">Distric 1, TP.HCM, Viet Nam</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h5>Contact Us</h5>
+                                                <i class="fa fa-phone fa-lg"></i>: 028 7300 1866<br />
+
+                                                <i class="fa fa-envelope fa-lg"></i>:
+                                                <a href="daisymarika81@gmail.com">daisymarika81@gmail.com</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Optional JavaScript -->
+                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                    crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                    crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                    crossorigin="anonymous"></script>
+            </body>
+
+            </html>

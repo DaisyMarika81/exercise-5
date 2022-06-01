@@ -72,7 +72,14 @@ address {
   z-index: 1;
 }
 
-#myModal {
+.modal-header {
+  background-color: $background-dark;
+
+  .modal-title {
+    color: floralwhite;
+  }
+}
+
+.modal-body{
   background-color: $background-pale;
-  color: white;
 }
